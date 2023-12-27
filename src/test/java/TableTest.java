@@ -17,7 +17,7 @@ public class TableTest {
     void getTableColumns() {
         getDriver().get("https://www.w3schools.com/html/html_tables.asp");
         getDriver().findElement(acceptPopup).click();
-        String text = new TableTest().tableValue(2,1);
+        String text = new TableTest().tableValue(3,3);
         System.out.println(text);
     }
 }

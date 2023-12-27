@@ -13,13 +13,13 @@ public class Table {
 
     public List<WebElement> getRows() {
         return elementTable
-                .findElements(By.xpath("//table[@id='customers']/tbody/tr"));
+                .findElements(By.xpath(".//table[@id='customers']/tbody/tr"));
     }
     List<List<WebElement>> getRowsAndColumns() {
         List<WebElement> rows = getRows();
         List<List<WebElement>> rowsAndColumns = new ArrayList<>();
         for(WebElement row:rows) {
-            List<WebElement> rowWithColumn = row.findElements(By.xpath("//table[@id='customers']/tbody/tr/td"));
+            List<WebElement> rowWithColumn = row.findElements(By.xpath(".//table[@id='customers']/tbody/tr/td"));
             rowsAndColumns.add(rowWithColumn);
         }
         return rowsAndColumns;
