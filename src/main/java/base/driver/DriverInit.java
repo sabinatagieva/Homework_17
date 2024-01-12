@@ -9,7 +9,7 @@ public class DriverInit {
 
     private DriverInit() {}
 
-    public synchronized static WebDriver getDriver() {
+    public static WebDriver getDriver() {
         if (driver == null) {
             synchronized (DriverInit.class) {
                 if (driver == null) {
@@ -19,10 +19,5 @@ public class DriverInit {
             }
         }
         return driver;
-    }
-
-    public static void quit() {
-        driver.quit();
-        driver = null;
     }
 }
